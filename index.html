@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Yosra Rhim - Embedded Software, Telecommunications and AI Engineer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(180deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        .titre {
+  text-align: center;
+  margin-bottom: 20px; /* ✅ espace entre le h3 et le paragraphe */
+  font-weight: 600;
+  color:#d63447; /* couleur texte personnalisable */
+}
+
+.description {
+  text-align: center; /* ✅ centre le texte */
+  width: 80%; /* réduit la largeur pour un look plus professionnel */
+  margin: 0 auto; /* centre le bloc horizontalement */
+  line-height: 1.6;
+  font-size: 1.1rem;
+  color:#fff; /* couleur texte douce */
+}
+.hero-description { /* ou la classe de votre paragraphe */
+  margin-bottom: 40px; /* Ajustez la valeur selon vos besoins */
+}
+
+        /* Navigation */
+        header {
+            background: rgba(26, 26, 46, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 600;
+            color: #e94560;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 10px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 24px;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            background: rgba(233, 69, 96, 0.2);
+            color: #e94560;
+        }
+
+        /* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 40px 60px;
+    position: relative;
+}
+/* OU pour les boutons */
+.hero-buttons {
+  margin-top: 60px;
+}
+.brain-icon {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 50px;
+    position: relative;
+    animation: float 3s ease-in-out infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brain-circle {
+    width: 180px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, rgba(233, 69, 96, 0.3) 0%, rgba(233, 69, 96, 0) 70%);
+    border-radius: 50%;
+}
+
+.profile-image {
+    width: 250px;
+    height: 210px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ff6b9d;
+    box-shadow: 0 0 30px rgba(255, 107, 157, 0.6),
+                0 0 60px rgba(233, 69, 96, 0.4);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+        .hero-content h1 {
+            font-size: 72px;
+            margin-bottom: 20px;
+            font-weight: 300;
+            color: #ffc0cb;
+            letter-spacing: 2px;
+        }
+
+        .hero-content h2 {
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: #fff;
+            font-weight: 400;
+            opacity: 0.9;
+            overflow: hidden;
+            border-right: 3px solid #e94560;
+            white-space: nowrap;
+            animation: typing 4s steps(60) 1s forwards, blink 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            margin-bottom: 50px;
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 700px;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #e94560, #d63447);
+            color: white;
+            padding: 16px 40px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(233, 69, 96, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 30px rgba(233, 69, 96, 0.6);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: 16px 40px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Sections */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #ffc0cb;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 18px;
+            margin-bottom: 60px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 18px;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .about-text h3 {
+            color: #e94560;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+         .contact-info {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .contact-info p {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .stat-card:hover {
+            background: rgba(233, 69, 96, 0.1);
+            border-color: rgba(233, 69, 96, 0.3);
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: 700;
+            color: #e94560;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 16px;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .skill-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 40px 30px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s;
+            text-align: center;
+        }
+
+        .skill-card:hover {
+            background: rgba(233, 69, 96, 0.1);
+            border-color: rgba(233, 69, 96, 0.3);
+            transform: translateY(-10px);
+        }
+
+        .skill-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .skill-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #ffc0cb;
+        }
+
+        .skill-card p {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+        }
+
+
+
+    /* Experience Section */
+
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    gap: 20px;
+}
+
+.experience-info {
+    flex: 1;
+}
+
+.btn-download-attestation {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 8px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.btn-download-attestation:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.5);
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+.btn-download-attestation svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .experience-header {
+        flex-direction: column;
+    }
+    
+    .btn-download-attestation {
+        align-self: flex-start;
+    }
+}
+        .experience-timeline {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            padding-left: 40px;
+        }
+
+        .experience-timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, #e94560, #764ba2);
+        }
+
+        .experience-item {
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            left: -47px;
+            top: 5px;
+            width: 15px;
+            height: 15px;
+            background: #e94560;
+            border-radius: 50%;
+            border: 3px solid #1a1a2e;
+            box-shadow: 0 0 0 3px #e94560;
+        }
+
+        .experience-item h3 {
+            font-size: 24px;
+            color: #ffc0cb;
+            margin-bottom: 10px;
+        }
+
+        .experience-company {
+            color: #e94560;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .experience-date {
+            color: rgba(255, 255, 255, 0.5);
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .experience-item ul {
+            list-style: none;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.8;
+        }
+
+        .experience-item ul li:before {
+            content: "• ";
+            color: #e94560;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+
+        /* Projects Section */
+        .projects-grid-three{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin: auto;
+            padding: 30px;
+            align-items: stretch;
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(233, 69, 96, 0.3);
+            box-shadow: 0 10px 40px rgba(233, 69, 96, 0.2);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 220px;
+            background: linear-gradient(135deg, rgba(233, 69, 96, 0.3), rgba(233, 69, 96, 0.1));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 64px;
+        }
+
+        .project-content {
+            padding: 20px;
+        }
+
+        .project-content h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #ffc0cb;
+        }
+
+        .project-content p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            background: rgba(233, 69, 96, 0.2);
+            color: #e94560;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            border: 1px solid rgba(233, 69, 96, 0.3);
+        }
+
+        /* Certifications Section */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .cert-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 40px 30px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s;
+            text-align: center;
+        }
+
+        .cert-card:hover {
+            background: rgba(233, 69, 96, 0.1);
+            border-color: rgba(233, 69, 96, 0.3);
+            transform: translateY(-5px);
+        }
+
+        .cert-card h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #ffc0cb;
+        }
+
+        .cert-issuer {
+            color: #e94560;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .cert-date {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 14px;
+        }
+
+        /* ---------- Contact section styles (copy into your CSS) ---------- */
+
+.contact-panel{
+    width:100%;
+    max-width:760px;
+    margin:30px auto;
+    border-radius:14px;
+    padding:28px;
+    background:linear-gradient(180deg,rgba(255,255,255,0.015),rgba(255,255,255,0.01));
+    border:1px solid rgba(111,94,248,0.09);
+    box-shadow:0 30px 80px rgba(3,10,18,0.7);
+}
+
+.contact-panel .panel-title{
+    font-size:20px;
+    text-align:center;
+    color:#fff;
+    font-weight:700;
+    margin-bottom:18px;
+}
+
+.contact-rows{ display:flex; flex-direction:column; gap:14px; }
+
+.contact-row{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    padding:18px;
+    border-radius:10px;
+    background:linear-gradient(90deg,rgba(255,255,255,0.01),rgba(255,255,255,0.005));
+    border:1px solid rgba(255,255,255,0.02);
+}
+
+.contact-icon{
+    min-width:54px;
+    height:54px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(180deg,rgba(111,94,248,0.14),rgba(111,94,248,0.06));
+    border:1px solid rgba(111,94,248,0.12);
+    color:#fff;
+    font-size:18px;
+}
+
+.contact-meta{ flex:1; }
+.contact-meta .label{ font-size:13px; color:rgba(255,255,255,0.55); margin-bottom:6px; }
+.contact-meta .value{ font-weight:700; color:#fff; word-break:break-word; }
+
+.contact-divider{
+    height:1px;
+    background:linear-gradient(90deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));
+    margin:18px 0;
+    border-radius:2px;
+}
+
+/* Social row */
+.social-row{ display:flex; flex-direction:column; align-items:center; gap:12px; }
+.social-buttons{ display:flex; gap:12px; flex-wrap:wrap; justify-content:center; }
+.social-btn{
+    padding:10px 18px;
+    border-radius:8px;
+    background:rgba(255,255,255,0.03);
+    border:1px solid rgba(255,255,255,0.03);
+    font-weight:700;
+    color:#fff;
+    text-decoration:none;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    transition:transform .18s, box-shadow .18s;
+}
+.social-btn:hover{ transform:translateY(-4px); box-shadow:0 18px 40px rgba(0,0,0,0.45); }
+
+.cta-email{
+    display:inline-block;
+    padding:12px 20px;
+    border-radius:10px;
+    background:linear-gradient(90deg,#6f5ef8,#4bc0f0);
+    color:#fff;
+    font-weight:800;
+    border:none;
+    text-decoration:none;
+    margin-top:8px;
+}
+
+/* Small responsive tweaks */
+@media (max-width:560px){
+    .contact-panel{ padding:18px; }
+    .contact-icon{ min-width:46px; height:46px; font-size:16px; }
+    .social-btn{ padding:8px 12px; font-size:14px; }
+}
+/* adaptation responsive : 2 colonnes puis 1 colonne */
+@media (max-width: 1100px) {
+  .projects-grid-three { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 700px) {
+  .projects-grid-three { grid-template-columns: 1fr; }
+}
+
+    </style>
+</head>
+
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Yosra Rhim</div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="brain-icon">
+            <div class="brain-circle">
+                <img src="image1 .png" alt="Yosra Rhim" class="profile-image">
+            </div>
+        </div>
+        <div class="hero-content fade-in">
+            <h1>Hi, I'm Yosra Rhim </h1>
+            <h3 class="titre">
+            AI & Embedded Systems Engineer | Bachelor in Embedded Systems | AI & IoT Enthusiast | Full-Stack Developer 💻
+            </h3>
+        </div>
+        <p class="description">
+         Passionate about Artificial Intelligence, I specialize in developing innovative IoT and AI-powered solutions, 
+           from firmware design to full-stack development, with a strong focus on creating intelligent, connected, 
+         and scalable systems that enhance performance and efficiency.
+        </p>
+
+
+
+        <div class="hero-buttons">
+                <a href="assets/Yosra_RhimCV.pdf" class="btn-primary" download="Yosra_Rhim_CV.pdf">Download Resume</a>
+                <a href="#contact" class="btn-secondary">Contact Me</a>
+        </div>
+
+    </section>
+
+    <div class="container">
+        <section id="about">
+            <h2 class="section-title">About Me</h2>
+            <p class="section-subtitle">Passionate about creating intelligent solutions</p>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Hello! I'm Yosra Rhim </h3>
+                    <p>Currently pursuing an engineering degree, I am a final-year engineering student with a strong passion for Artificial Intelligence, Embedded Software, and IoT. I bring solid technical expertise and strong analytical and  problem-solving skills. I am seeking a 6-month internship to advance my career by contributing to innovative
+AI-driven projects and developing impactful technological solutions.</p>
+                </div>
+
+                    <div class="contact-info">
+                        <p>📧 yosrarhimyosra@gmail.com</p>
+                        <p>📱 +216 92 187 090</p>
+                        <p>📍 Monastir , Tunisia</p>
+                    </div>
+                </div>
+
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">Technologies</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Certifications</div>
+                    </div>
+                </div>
+            </div>
+        
+        </section>
+
+        <section id="skills">
+            <h2 class="section-title">Skills & Expertise</h2>
+            <p class="section-subtitle">Technologies and tools I work with</p>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">🤖</div>
+                    <h3>Machine Learning</h3>
+                    <p>TensorFlow, PyTorch, Scikit-learn, Deep Learning, Neural Networks, Computer Vision</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">💻</div>
+                    <h3>Web Development</h3>
+                   <ul>
+                        <p>Frontend: HTML, CSS, React.js</p>
+                        <p>Backend: Node.js, Spring Boot</p>
+                        <p>API REST</p>
+                    </ul>
+                </div>
+                 <div class="skill-card">
+                    <div class="skill-icon">💻</div>
+                    <h3>Programming Languages </h3>
+                        <p>C/C++</p>
+                        <p>Python</p>
+                        <p>JavaScript</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">📊</div>
+                    <h3>Databases</h3>
+                    <ul>
+                        <p>MySQL</p>
+                        <p>MongoDB</p>
+                        <p>Firebase</p>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">☁️</div>
+                    <h3>Cloud & DevOps</h3>
+                    <p>AWS, Docker, Kubernetes, CI/CD, Git, Linux</p>
+                </div>
+
+               <div class="skill-card">
+                    <div class="skill-icon">🔌</div>
+                    <h3>Embedded Systems & IoT</h3>
+                    <p>STM32, ESP32, Raspberry Pi, Arduino</p>
+                    <p>STM32CubeIDE, Arduino IDE</p>
+                  <p>MQTT, Real-time Systems</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="certifications">
+            <h2 class="section-title">Certifications</h2>
+            <p class="section-subtitle">Professional qualifications and achievements</p>
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <h3>TensorFlow Developer Certificate</h3>
+                    <p class="cert-issuer">Google</p>
+                    <p class="cert-date">2023</p>
+                </div>
+                <div class="cert-card">
+                    <h3>AWS Certified ML Specialty</h3>
+                    <p class="cert-issuer">Amazon Web Services</p>
+                    <p class="cert-date">2023</p>
+                </div>
+                  <!-- Certification 3 - NVIDIA Deep Learning -->
+            <div class="cert-card">
+                <h3>Getting Started with Deep Learning</h3>
+                <p class="cert-issuer">NVIDIA</p>
+                <p class="cert-year">2024</p>
+                <a href="assets/deep.learning.pdf" class="btn-cert" download="Yosra_Rhim_NVIDIA_DeepLearning.pdf">
+                    Download Certificate
+                </a>
+            </div>
+            <!-- Certification 4 - NVIDIA AI Predictive Maintenance -->
+            <div class="cert-card">
+                <h3>Applications of AI for Predictive Maintenance</h3>
+                <p class="cert-issuer">NVIDIA</p>
+                <p class="cert-year">2024</p>
+                <a href="assets/Applications of AI for Predictive Maintenance.pdf" class="btn-cert" download="Yosra_Rhim_NVIDIA_AI_Maintenance.pdf">
+                    Download Certificate
+                </a>
+            </div>
+
+             <!-- Certification 5 - ROS Foundation -->
+            <div class="cert-card">
+                <h3>ROS Code Foundation</h3>
+                <p class="cert-issuer">The Construct</p>
+                <p class="cert-year">2025</p>
+                <a href="assets/certificat de construct ai.pdf" class="btn-cert" download="Yosra_Rhim_ROS_Foundation.pdf">
+                    Download Certificate
+                </a>
+            </div>
+            <!-- Certification 6 - Industry 4.0 -->
+            <div class="cert-card">
+                <h3>Industry 4.0 Fundamentals</h3>
+                <p class="cert-issuer">Novation City</p>
+                <p class="cert-year">2024</p>
+                <a href="assets/certificate de l'industrie .pdf" class="btn-cert" download="Yosra_Rhim_Industry4_0.pdf">
+                    Download Certificate
+                </a>
+            </div>
+              <!-- Certification 7 - Python (si vous l'avez) -->
+            <div class="cert-card">
+                <h3>Python for Data Science</h3>
+                <p class="cert-issuer">IBM / Coursera</p>
+                <p class="cert-year">2022</p>
+                <a href="assets/certificates/python-data-science.pdf" class="btn-cert" download="Yosra_Rhim_Python_Certificate.pdf">
+                    Download Certificate
+                </a>
+            </div>
+        </section>
+
+  <section id="experience">
+            <h2 class="section-title">Professional Experience</h2>
+            <p class="section-subtitle">My journey in tech</p>
+            <div class="experience-timeline">
+                <div class="experience-item">
+                    <h3>Development Intern and AI</h3>
+                    <p class="experience-company">Leoni – Sousse</p>
+                    <p class="experience-date">June 2025</p>
+                    <ul>
+                        <li>Developed the Smart Stage web platform using Node.js, React, MongoDB, Power BI to digitalize internship management</li>
+                        <li>Automated report generation using AI models — improving efficiency by 30%</li>
+                        <li>Designed and deployed an intelligent dashboard leveraging AI models to enhance visibility and streamline performance tracking</li>
+                    </ul>
+                <a href="assets/attestaion .pdf" class="btn-download-attestation" download="Yosra_Rhim_Leoni_Attestation.pdf">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            Download Attestation
+        </a>
+        </div>
+                <div class="experience-item">
+                    <h3>Networks and IoT Intern</h3>
+                    <p class="experience-company">Dräxlmaier – Sousse</p>
+                    <p class="experience-date">August 2024</p>
+                    <ul>
+                        <li>Implemented an IoT system with Power BI visualization</li>
+                        <li>Developed real-time alerts for device monitoring</li>
+                    </ul>
+        <a href="assets/attestaion .pdf" class="btn-download-attestation" download="Yosra_Rhim_Leoni_Attestation.pdf">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            Download Attestation
+        </a>
+                </div>
+                <div class="experience-item">
+                    <h3>Development and Robotics Intern - PFE</h3>
+                    <p class="experience-company">CRMN – Sousse</p>
+                    <p class="experience-date">January 2023 - June 2023</p>
+                    <ul>
+                        <li>Developed a telemedicine platform with a mobile robot</li>
+                        <li>Applied React, SQL and Firebase to enable remote consultations</li>
+                        <li>Automated medical tasks using robotics</li>
+                    </ul>
+         
+                </div>
+                <div class="experience-item">
+                    <h3>IoT Intern</h3>
+                    <p class="experience-company">WattsElectronis – Monastir </p>
+                    <p class="experience-date">Aug 2022</p>
+                    <ul>
+                    <li>
+                        Designed electronic boards for a smart environmental monitoring device, integrating sensors and leveraging
+                      Arduino/ESP32/STM32, IoT, C/C++, MQTT, and Python .
+                    </li>
+                    </ul>
+
+                    <a href="assets/CamScanner 17-09-2025 03.14.pdf" class="btn-download-attestation" download="Yosra_Rhim_Leoni_Attestation.pdf">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            Download Attestation
+        </a>
+                </div>
+
+            </div>
+  </section>
+        <section id="projects">
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle">Some of my recent work</p>
+
+            <div class="projects-grid-three">
+                <div class="project-card">
+                    <div class="project-image">🎯</div>
+                    <div class="project-content">
+                        <h3>AI Recommendation System</h3>
+                        <p>Developed an intelligent recommendation engine using deep learning to personalize user experiences and increase engagement by 40%.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">TensorFlow</span>
+                            <span class="tag">NLP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">📈</div>
+                    <div class="project-content">
+                        <h3>Predictive Analytics Platform</h3>
+                        <p>Built a real-time predictive analytics platform for financial forecasting with 95% accuracy using ensemble methods.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Scikit-learn</span>
+                            <span class="tag">AWS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">💬</div>
+                    <div class="project-content">
+                        <h3>Smart Chatbot</h3>
+                        <p>Created an AI-powered chatbot using NLP and transformers, capable of understanding context and providing human-like responses.</p>
+                        <div class="project-tags">
+                            <span class="tag">PyTorch</span>
+                            <span class="tag">NLP</span>
+                            <span class="tag">FastAPI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+ <!-- Grid contenant LES 3 projets côte à côte -->
+  <div class="projects-grid-three" style="margin: top 22px;">
+    <!-- Smart Stage -->
+    <div class="project-card">
+      <div class="project-image">🖥️</div>
+      <div class="project-content">
+        <h3>Smart Stage — Plateforme de gestion de stage (Full-Stack + IA)</h3>
+        <p>Application web full-stack pour gérer les stages : connexion, dashboard, journal de bord, génération de rapports. Intégration d'analyses IA pour priorisation des tâches et suggestions automatiques.</p>
+        <div class="project-tags">
+          <span class="tag">Node.js</span>
+          <span class="tag">React</span>
+          <span class="tag">MongoDB</span>
+          <span class="tag">Power BI</span>
+          <span class="tag">ML</span>
+        </div>
+        <div class="project-cta">
+          <a class="more-btn" href="https://github.com/yosrarhim/smart-stage" target="_blank">GitHub</a>
+          <span class="small-note">Front + API + Notifications</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fire Extinguisher -->
+    <div class="project-card">
+      <div class="project-image">🔥</div>
+      <div class="project-content">
+        <h3>Système d'extinction intelligent</h3>
+        <p>Système autonome de détection et d'extinction de feu basé sur ESP32-CAM et YOLOv3-Tiny, actionneurs (pompe, alarme) et communication MQTT pour monitoring et alerting.</p>
+        <div class="project-tags">
+          <span class="tag">ESP32-CAM</span>
+          <span class="tag">YOLOv3-Tiny</span>
+          <span class="tag">Python</span>
+          <span class="tag">MQTT</span>
+        </div>
+        <div class="project-cta">
+          <a class="more-btn" href="https://github.com/yosrarhim/fire-extinguisher" target="_blank">GitHub</a>
+          <span class="small-note">Notebook d'entraînement & diagramme matériel</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Robot Otto -->
+    <div class="project-card">
+      <div class="project-image">🤖</div>
+      <div class="project-content">
+        <h3>Robot Otto — Robot bipède autonome</h3>
+        <p>Conception et programmation d'un robot Otto capable de marcher, danser et éviter les obstacles. Contrôlé par servomoteurs et un microcontrôleur, avec modes interactifs et télécommande.</p>
+        <div class="project-tags">
+          <span class="tag">Arduino</span>
+          <span class="tag">C++</span>
+          <span class="tag">Servos</span>
+          <span class="tag">Sensing</span>
+        </div>
+        <div class="project-cta">
+          <a class="more-btn" href="https://github.com/yosrarhim/robot-otto" target="_blank">GitHub</a>
+          <span class="small-note">Schéma & séquence de mouvements</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+       <!-- ---------- Contact section HTML ---------- -->
+<section id="contact" class="contact-section">
+  <h2 class="section-title">Contact</h2>
+  <p class="section-subtitle">N'hésitez pas à me contacter pour toute opportunité ou collaboration</p>
+
+  <div class="contact-panel" role="region" aria-label="Contact">
+    <div class="panel-title">Restons en contact</div>
+
+    <div class="contact-rows">
+      <div class="contact-row">
+        <div class="contact-icon" aria-hidden="true"><i class="fa-solid fa-envelope contact-icon"></i>
+        </div>
+        <div class="contact-meta">
+          <div class="label">Email</div>
+          <div class="value"><a href="mailto:yosrarhimyosra@gmail.com" style="color:inherit;text-decoration:underline">yosrarhimyosra@gmail.com</a>
+        </div>
+        </div>
+      </div>
+
+      <div class="contact-row">
+        <div class="contact-icon" aria-hidden="true">
+            <i class="fa-solid fa-phone contact-icon"></i>
+        </div>
+        <div class="contact-meta">
+          <div class="label">Téléphone</div>
+          <div class="value">+216 92 187 090</div>
+        </div>
+      </div>
+
+      <div class="contact-row">
+        <div class="contact-icon" aria-hidden="true">
+            <i class="fa-solid fa-location-dot contact-icon"></i>
+        </div>
+        <div class="contact-meta">
+          <div class="label">Adresse</div>
+          <div class="value">Monastir, Tunisie</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-divider" aria-hidden="true"></div>
+
+    <div class="social-row">
+      <div style="color:rgba(255,255,255,0.65);margin-bottom:6px">Suivez-moi sur les réseaux sociaux</div>
+
+      <div class="social-buttons">
+        <a class="social-btn" href="https://www.linkedin.com/in/rhim-yosra-135a51251/" target="_blank" rel="noopener">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a class="social-btn" href="https://github.com/yosrarhim" target="_blank" rel="noopener">
+          <i class="fa fa-github"></i> GitHub
+        </a>
+        
+      </div>
+
+      <div>
+       <a href="https://mail.google.com/mail/?view=cm&fs=1&to=yosrahimyosra@gmail.com&su=Contact%20depuis%20le%20portfolio&body=Bonjour%20Yosra%2C%0AJe%20souhaite%20..." 
+   target="_blank" class="email-btn">
+   <i class="fa-solid fa-paper-plane"></i> Envoyer un Email
+</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+            event.target.reset();
+        }
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Active navigation
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-links a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            // Navigation active state on scroll
+const sections = document.querySelectorAll('main section');
+const navLinks = document.querySelectorAll('.nav-links a');
+function onScroll(){
+let current = '';
+sections.forEach(section=>{
+const top = section.offsetTop - 140;
+if(window.scrollY >= top) current = section.getAttribute('id');
+});
+navLinks.forEach(link=>{
+link.classList.remove('active');
+if(link.getAttribute('href') === '#' + current) link.classList.add('active');
+});
+}
+window.addEventListener('scroll', onScroll);
+onScroll();
+
+
+// Contact form: client-side handling
+const contactForm = document.getElementById('contactForm');
+contactForm.addEventListener('submit', function(e){
+e.preventDefault();
+const name = document.getElementById('name').value.trim();
+const email = document.getElementById('email').value.trim();
+const message = document.getElementById('message').value.trim();
+if(!name || !email || !message){ alert('Merci de remplir tous les champs.'); return; }
+
+
+// Simple client-side feedback
+alert('Merci pour votre message ! Je vous répondrai bientôt.');
+contactForm.reset();
+});
+
+         });
+
+// Modal controls
+const openMore = document.getElementById('openMore');
+const modalBackdrop = document.getElementById('modalBackdrop');
+const closeModal = document.getElementById('closeModal');
+const modalCloseFooter = document.getElementById('modalCloseFooter');
+function showModal(){ modalBackdrop.style.display='flex'; modalBackdrop.setAttribute('aria-hidden','false'); }
+function hideModal(){ modalBackdrop.style.display='none'; modalBackdrop.setAttribute('aria-hidden','true'); }
+if(openMore) openMore.addEventListener('click', showModal);
+if(closeModal) closeModal.addEventListener('click', hideModal);
+if(modalCloseFooter) modalCloseFooter.addEventListener('click', hideModal);
+modalBackdrop.addEventListener('click', (e)=>{ if(e.target===modalBackdrop) hideModal(); });
+document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') hideModal(); });
+
+
+// Smooth scrolling & active nav
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+anchor.addEventListener('click', function(e){ e.preventDefault(); const target=document.querySelector(this.getAttribute('href')); if(target) target.scrollIntoView({behavior:'smooth',block:'start'}); });
+});
+
+
+function onScroll(){ const sections=document.querySelectorAll('section'); const navLinks=document.querySelectorAll('.nav-links a'); let current=''; sections.forEach(section=>{ const top=section.offsetTop - 140; if(window.scrollY >= top) current = section.getAttribute('id'); }); navLinks.forEach(link=>{ link.classList.remove('active'); if(link.getAttribute('href') === '#'+current) link.classList.add('active'); }); }
+window.addEventListener('scroll', onScroll); onScroll();
+        </script>    
+
+    </div>
+  
+</footer>
+</body>
+</html>
