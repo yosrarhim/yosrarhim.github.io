@@ -105,8 +105,8 @@ color: #fff;
   margin-top: 60px;
 }
 .brain-icon {
-    width: 180px;
-    height: 180px;
+    width: 300px;
+    height: 300px;
     margin: 0 auto 50px;
     position: relative;
     animation: float 3s ease-in-out infinite;
@@ -116,8 +116,8 @@ color: #fff;
 }
 
 .brain-circle {
-    width: 180px;
-    height: 180px;
+    width: 350px;
+    height: 350px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -126,8 +126,8 @@ color: #fff;
 }
 
 .profile-image {
-    width: 250px;
-    height: 210px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     object-fit: cover;
 }
@@ -212,6 +212,47 @@ color: #fff;
             border-color: rgba(255, 255, 255, 0.3);
             transform: translateY(-2px);
         }
+.btn-cv {
+    display: inline-block;
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #1e90ff, #05475d);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.btn-cv:hover {
+    background: linear-gradient(135deg, #00bfff, #1e90ff);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+/* Style du bouton */
+.btn-cert-git {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background-color: #24292f; /* couleur GitHub */
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.btn-cert-git:hover {
+    transform: scale(1.05);
+}
+
+.git-icon {
+    width: 20px;
+    height: 20px;
+    filter: invert(1); /* pour que l'icône soit blanche */
+        margin-left: 15px; /* espace entre le bouton et l'icône GitHub */
+}
 
         /* Sections */
         .container {
@@ -743,7 +784,7 @@ color: #fff;
     <section class="hero" id="home">
         <div class="brain-icon">
             <div class="brain-circle">
-                <img src="image1 .png" alt="Yosra Rhim" class="profile-image">
+                <img src="mon photo gris .png" alt="Yosra Rhim" class="profile-image">
             </div>
         </div>
         <div class="hero-content fade-in">
@@ -760,7 +801,7 @@ color: #fff;
 
 
         <div class="hero-buttons">
-               <a href="https://raw.githubusercontent.com/yosrarhim/yosrarhim.github.io/main/assets/cv_yosra%20(4).pdf" class="btn-primary" download="CV_Yosra_Rhim.pdf" target="_blank">Download Resume</a>
+                <a href="assets/RHIM_yosra.pdf" download class="btn-cv"> Télécharger mon CV </a>
                 <a href="#contact" class="btn-secondary">Contact Me</a>
         </div>
 
@@ -816,21 +857,24 @@ AI-driven projects and developing impactful technological solutions.</p>
             <p class="section-subtitle">Technologies and tools I work with</p>
             <div class="skills-container">
                 <div class="skill-card">
-                    <div class="skill-icon">🧠</div>
-                    <h3>Machine Learning & Artificial Intelligence</h3>
-                    <p>TensorFlow , PyTorch , Scikit-learn , Deep Learning , Neural Networks , Computer Vision (YOLOv3-Tiny , OpenCV)</p>
-                    <p>NLP , Transformers (BERT, GPT, T5) , Generative AI (LLMs) , Recommendation Systems , Predictive Analytics</p>
-                </div>
-
+                    <!-- AI & Machine Learning -->
+    
+            <div class="skill-icon">🧠</div>
+            <h3>Machine Learning & Artificial Intelligence</h3>
+            <p><strong>Frameworks :</strong> TensorFlow, PyTorch, Scikit-learn</p>
+            <p><strong>Computer Vision :</strong> YOLOv3, OpenCV</p>
+            <p><strong>NLP & LLMs :</strong> Transformers (BERT, GPT), RAG, Generative AI</p>
+            <p>Deep Learning, Neural Networks, Classification, Prediction</p>
+        </div>
                 
                 <div class="skill-card">
                     <div class="skill-icon">💻</div>
                     <h3>Web Development</h3>
-                   <ul>
-                        <p><strong>Frontend : </strong> HTML, CSS, React.js</p>
-                        <p><strong>Backend : </strong> Node.js, Spring Boot , Express.js </p>
-                        <p>API REST, JSON , JWT Authentication</p>
-                    </ul>
+            <ul>
+                <p><strong>Frontend :</strong> HTML, CSS, React.js, Angular</p>
+                <p><strong>Backend :</strong> Node.js, Express.js, Spring Boot</p>
+                <p>API REST, JSON, JWT Authentication</p>
+            </ul>
                 </div>
                  <div class="skill-card">
                     <div class="skill-icon">💬</div>
@@ -841,7 +885,7 @@ AI-driven projects and developing impactful technological solutions.</p>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">📊</div>
-                    <h3>Databases</h3>
+                  <h3>Databases & BI</h3>
                     <ul>
                         <p>MySQL</p>
                         <p>MongoDB</p>
@@ -852,21 +896,22 @@ AI-driven projects and developing impactful technological solutions.</p>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">☁️</div>
-                    <h3>Cloud & DevOps</h3>
-                    <p>AWS </p>
-                    <p>Azure </p>
-                    <p>Machine Learning</p>
-                    <p>Docker</p>
-                    <p>Git</p>
-                        <p>Linux </p>
+                    <h3>Tools & Cloud</h3>
+                   <p>Git</p>
+            <p>Docker</p>
+            <p>Postman</p>
+            <p>VS Code</p>
+            <p>Agile / Scrum</p>
                 </div>
 
                <div class="skill-card">
                     <div class="skill-icon">🔌</div>
-                    <h3>Embedded Systems & IoT</h3>
-                    <p>STM32, ESP32, Raspberry Pi, Arduino</p>
-                    <p>STM32CubeIDE, Arduino IDE</p>
-                  <p>MQTT, Real-time Systems</p>
+                  
+            <h3>IoT & Embedded Systems</h3>
+            <p>ESP32, STM32, Raspberry Pi</p>
+            <p>MQTT, Real-time Systems</p>
+            <p>Embedded C, Microcontrollers</p>
+        </div>
                 </div>
             </div>
         </section>
@@ -875,16 +920,6 @@ AI-driven projects and developing impactful technological solutions.</p>
             <h2 class="section-title">Certifications</h2>
             <p class="section-subtitle">Professional qualifications and achievements</p>
             <div class="cert-grid">
-                <div class="cert-card">
-                    <h3>TensorFlow Developer Certificate</h3>
-                    <p class="cert-issuer">Google</p>
-                    <p class="cert-date">2023</p>
-                </div>
-                <div class="cert-card">
-                    <h3>AWS Certified ML Specialty</h3>
-                    <p class="cert-issuer">Amazon Web Services</p>
-                    <p class="cert-date">2023</p>
-                </div>
                   <!-- Certification 3 - NVIDIA Deep Learning -->
             <div class="cert-card">
                 <h3>Getting Started with Deep Learning</h3>
@@ -893,6 +928,7 @@ AI-driven projects and developing impactful technological solutions.</p>
                 <a href="assets/deep.learning.pdf" class="btn-cert" download="Yosra_Rhim_NVIDIA_DeepLearning.pdf">
                     Download Certificate
                 </a>
+                
             </div>
             <!-- Certification 4 - NVIDIA AI Predictive Maintenance -->
             <div class="cert-card">
@@ -957,6 +993,11 @@ AI-driven projects and developing impactful technological solutions.</p>
             </svg>
             Download Attestation
         </a>
+
+<!-- Bouton avec icône GitHub -->
+<a href="https://github.com/yosrarhim/Smart-Stage-AI-Powered-Internship-Management-Platform-" target="_blank">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" class="git-icon">
+</a>
         </div>
                 <div class="experience-item">
                     <h3>Networks and IoT Intern</h3>
@@ -975,6 +1016,10 @@ AI-driven projects and developing impactful technological solutions.</p>
             </svg>
             Download Attestation
         </a>
+        <!-- Bouton avec icône GitHub -->
+<a href="https://github.com/yosrarhim/Smart-Stage-AI-Powered-Internship-Management-Platform-" target="_blank">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" class="git-icon">
+</a>
                 </div>
                 <div class="experience-item">
                     <h3>Development and Robotics Intern - PFE</h3>
@@ -1009,6 +1054,10 @@ AI-driven projects and developing impactful technological solutions.</p>
             </svg>
             Download Attestation
         </a>
+<!-- Bouton avec icône GitHub -->
+<a href="https://github.com/yosrarhim/Smart-Stage-AI-Powered-Internship-Management-Platform-" target="_blank">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" class="git-icon">
+</a>
                 </div>
 
             </div>
@@ -1060,7 +1109,7 @@ AI-driven projects and developing impactful technological solutions.</p>
                 </div>
 
                 <div class="project-card">
-                    <div class="project-image">📈</div>
+                    <div class="project-image">🧪</div>
                     <div class="project-content">
                         <h3>AI Recommendation System (Intelligent Recommender Engine)</h3>
                         <p>Built an <strong style="color:navajowhite;" >AI recommendation system leveraging deep learning </strong> and explainable AI to personalize content and improve engagement by 40 %, aligned with traceability principles (ISO 26262)</p>
