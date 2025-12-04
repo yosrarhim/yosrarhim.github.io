@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yosra Rhim | AI & Embedded Systems Engineer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+  <link rel="icon" type="image/png" href="mon photo gris .png" />
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0ea5e9',   // bleu ciel
+            secondary: '#e94560', // rose/rouge (ton accent actuel)
+            dark: '#0f172a',
+            darker: '#020617',
+          },
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+    body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: #e2e8f0; }
+    .gradient-text { background: linear-gradient(90deg, #0ea5e9, #e94560); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(14, 165, 233, 0.25); }
+    .nav-link::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -6px; left: 0; background: linear-gradient(90deg, #0ea5e9, #e94560); transition: width 0.3s; }
+    .nav-link:hover::after, .nav-link.active::after { width: 100%; }
+    .skill-progress { height: 100%; border-radius: 4px; background: linear-gradient(90deg, #0ea5e9, #e94560); transition: width 1.5s ease-out; }
+    .project-card { background: linear-gradient(145deg, #1e293b, #0f172a); box-shadow: 5px 5px 15px rgba(2,6,23,0.5), -5px -5px 15px rgba(30,41,59,0.5); }
+    .floating { animation: float 4s ease-in-out infinite; }
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+  </style>
+</head>
+<body class="bg-dark text-slate-200">
+
+  <!-- Navigation -->
+  <nav class="fixed w-full bg-darker/80 backdrop-blur-md z-50 shadow-xl">
+    <div class="container mx-auto px-6 py-5">
+      <div class="flex justify-between items-center">
+        <a href="#" class="text-2xl font-bold gradient-text">Yosra Rhim</a>
+        <div class="hidden md:flex space-x-8">
+           <a href="#home" class="nav-link relative active">Home</a>
+          <a href="#about" class="nav-link relative">About</a>
+          <a href="#skills" class="nav-link relative">Skills</a>
+          <a href="#experience" class="nav-link relative">Experience</a>
+          <a href="#projects" class="nav-link relative">Projects</a>
+          <a href="#certifications" class="nav-link relative">Certifications</a>
+          <a href="#contact" class="nav-link relative">Contact</a>
+        </div>
+        <button id="menu-toggle" class="md:hidden text-2xl"><i class="fas fa-bars"></i></button>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-3 pb-4">
+         <a href="#home" class="nav-link relative active">Home</a>
+          <a href="#about" class="nav-link relative">About</a>
+          <a href="#skills" class="nav-link relative">Skills</a>
+          <a href="#experience" class="nav-link relative">Experience</a>
+          <a href="#projects" class="nav-link relative">Projects</a>
+          <a href="#certifications" class="nav-link relative">Certifications</a>
+          <a href="#contact" class="nav-link relative">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="home" class="min-h-screen flex items-center pt-20">
+    <div class="container mx-auto px-6 grid md:grid-cols-2 items-center gap-12">
+      <div>
+        <h1 class="text-5xl md:text-7xl font-bold mb-4">Yosra <span class="gradient-text">Rhim</span></h1>
+        <h2 class="text-2xl md:text-4xl font-semibold mb-6">
+  <span class="text-slate-300">Embedded Software Systems Engineer</span>
+  <span class="block bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
+    + AI & Full-Stack Developer
+  </span>
+</h2>
+        <p class="text-lg mb-8 text-slate-400 max-w-xl">
+Passionate about Artificial Intelligence, I design and build innovative, intelligent, and connected systems from embedded firmware to scalable AI-powered web applications focused on performance, reliability, and impact.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="assets/RHIM_yosra.pdf" download class="px-8 py-4 rounded-full bg-gradient-to-r from-primary to-secondary text-white font-bold shadow-lg hover:shadow-xl transition">
+            Télécharger CV
+          </a>
+          <a href="#contact" class="px-8 py-4 rounded-full border border-primary text-primary font-bold hover:bg-primary/10 transition">
+            Me contacter
+          </a>
+        </div>
+        <div class="flex gap-5 mt-10">
+          <a href="https://linkedin.com/in/rhim-yosra-135a51251" target="_blank" class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/yosrarhim" target="_blank" class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition"><i class="fab fa-github"></i></a>
+          <a href="mailto:yosrarhimyosra@gmail.com" class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center hover:bg-red-600 transition"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="flex justify-center">
+        <div class="relative">
+          <div class="absolute inset-0 rounded-full bg-gradient-to-br from-primary to-secondary blur-3xl opacity-30"></div>
+          <img src="mon photo gris .png" alt="Yosra Rhim" class="relative w-80 h-80 object-cover rounded-full border-8 border-slate-800 floating shadow-2xl">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-20 bg-darker">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4">My Profil <span class="gradient-text"></span></h2>
+      <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-12"></div>
+      <div class="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
+        <div class="text-left space-y-6 text-slate-300">
+          <p class="text-lg leading-relaxed">
+           Currently pursuing an engineering degree, I am a final-year engineering student with a strong passion for Artificial Intelligence, Embedded Software, and IoT. I bring solid technical expertise and strong analytical and problem-solving skills. I am seeking a 6-month internship to advance my career by contributing to innovative AI-driven projects and developing impactful technological solutions.
+          </p>
+          <div class="grid grid-cols-2 gap-6 mt-8">
+            <div class="bg-slate-800/50 p-6 rounded-xl"><span class="text-4xl font-bold gradient-text">3+</span><p class="text-sm mt-2">Years of Experience</p></div>
+            <div class="bg-slate-800/50 p-6 rounded-xl"><span class="text-4xl font-bold gradient-text">15+</span><p class="text-sm mt-2">Projects Completed</p></div>
+            <div class="bg-slate-800/50 p-6 rounded-xl"><span class="text-4xl font-bold gradient-text">30+</span><p class="text-sm mt-2">Technologies</p></div>
+            <div class="bg-slate-800/50 p-6 rounded-xl"><span class="text-4xl font-bold gradient-text">8+</span><p class="text-sm mt-2">Certifications</p></div>
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <img src="mon photo gris .png" alt="Yosra" class="w-80 rounded-2xl border-4 border-slate-700 shadow-2xl">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="py-20">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4">Skills</span></h2>
+      <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-12"></div>
+
+      <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div class="bg-slate-800/70 p-8 rounded-2xl card-hover transition">
+          <i class="fa-solid fa-brain text-5xl mb-4 gradient-text"></i>
+          <h3 class="text-2xl font-bold mb-4">IA & Machine Learning</h3>
+          <p class="text-slate-400">TensorFlow • PyTorch • Scikit-learn • YOLO • OpenCV • Transformers • RAG • LLM</p>
+        </div>
+        <div class="bg-slate-800/70 p-8 rounded-2xl card-hover transition">
+          <i class="fa-solid fa-code text-5xl mb-4 gradient-text"></i>
+          <h3 class="text-2xl font-bold mb-4">Développement Web</h3>
+          <p class="text-slate-400">React • Node.js • Express • Spring Boot • MongoDB • MySQL • REST API</p>
+        </div>
+        <div class="bg-slate-800/70 p-8 rounded-2xl card-hover transition">
+          <i class="fa-solid fa-brain text-5xl mb-4 gradient-text"></i>
+          <h3 class="text-2xl font-bold mb-4">Programming Languages </h3>
+          <p class="text-slate-400">C/C++ • Python • JavaScript </p>
+        </div>
+        <div class="bg-slate-800/70 p-8 rounded-2xl card-hover transition">
+          <i class="fa-solid fa-microchip text-5xl mb-4 gradient-text"></i>
+          <h3 class="text-2xl font-bold mb-4">Embarqué & IoT</h3>
+          <p class="text-slate-400">ESP32 • STM32 • Raspberry Pi • Embedded C • MQTT • Real-time</p>
+        </div>
+        <div class="bg-slate-800/70 p-8 rounded-2xl card-hover transition">
+          <i class="fa-solid fa-microchip text-5xl mb-4 gradient-text"></i>
+          <h3 class="text-2xl font-bold mb-4">Databases & BI</h3>
+          <p class="text-slate-400">MySQL • MongoDB • Firebase • Power BI</p>
+        </div>
+        <div class="bg-slate-800/70 p-8 rounded-2xl card-hover transition">
+          <i class="fa-solid fa-microchip text-5xl mb-4 gradient-text"></i>
+          <h3 class="text-2xl font-bold mb-4">Tools & Cloud</h3>
+          <p class="text-slate-400">Git • Docker • Postman • VS Code • Agile / Scrum</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="py-20 bg-darker">
+    <div class="container mx-auto px-6 text-center">
+     <h2 class="text-4xl md:text-5xl font-bold mb-4">Professional <span class="gradient-text">Experience</span></h2>
+      <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-12"></div>
+
+      <div class="max-w-4xl mx-auto space-y-12">
+        <div class="bg-slate-800/60 p-8 rounded-2xl card-hover transition text-left">
+          <h3 class="text-2xl font-bold gradient-text">Stagiaire Développement & IA – Leoni</h3>
+          <p class="text-slate-400">Juin 2025</p>
+          <p class="mt-4">Plateforme Smart Stage : gestion de stages avec IA (Node.js, React, MongoDB, Power BI)</p>
+        </div>
+        <div class="bg-slate-800/60 p-8 rounded-2xl card-hover transition text-left">
+          <h3 class="text-2xl font-bold gradient-text">Stagiaire Développement & IA – Dräxlmaier</h3>
+          <p class="text-slate-400">Août 2024</p>
+          <p class="mt-4">Plateforme d’analyse prédictive en temps réel (Python, Scikit-learn, Power BI)</p>
+        </div>
+        <div class="bg-slate-800/60 p-8 rounded-2xl card-hover transition text-left">
+          <h3 class="text-2xl font-bold gradient-text"> Stagiaire PFE – CRMN</h3>
+          <p class="text-slate-400">Janv. 2023 – Juin 2023</p>
+          <p class="mt-4">Plateforme de télémédecine avec robot mobile intelligent (React.js , Python, Flutter,Node.js)</p>
+        </div>
+        <div class="bg-slate-800/60 p-8 rounded-2xl card-hover transition text-left">
+          <h3 class="text-2xl font-bold gradient-text"> Stagiaire IOT - WattsElectronis</h3>
+          <p class="text-slate-400">Août 2022</p>
+          <p class="mt-4">Designed electronic boards for a smart environmental monitoring device, integrating sensors and leveraging (Arduino/ESP32/STM32, IoT, C/C++, MQTT, Python)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-20">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4"><span class="gradient-text">Projects</span></h2>
+      <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-12"></div>
+
+      <div class="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div class="project-card rounded-2xl overflow-hidden card-hover transition">
+          <div class="h-48 bg-gradient-to-br from-primary/30 to-secondary/30 flex items-center justify-center text-6xl"><i class="fas fa-robot"></i></div>
+          <div class="p-8">
+            <h3 class="text-xl font-bold mb-3">Smart Stage – AI Internship Management</h3>
+            <p class="text-slate-400 text-sm">Full-stack platform with AI analytics and intelligent dashboards PowerBI</p>
+            <div class="mt-4 flex gap-3">
+              <a href="https://github.com/yosrarhim/Smart-Stage-AI-Powered-Internship-Management-Platform-" target="_blank" class="text-primary"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card rounded-2xl overflow-hidden card-hover transition">
+          <div class="h-48 bg-gradient-to-br from-primary/30 to-secondary/30 flex items-center justify-center text-6xl"><i class="fas fa-fire"></i></div>
+          <div class="p-8">
+            <h3 class="text-xl font-bold mb-3"> AI Fire Detection & Extinguisher System IOT  </h3>
+            <p class="text-slate-400 text-sm">ESP32-CAM + YOLOv3-Tiny + actionnement automatique</p>
+            <div class="mt-4 flex gap-3">
+              <a href="https://github.com/yosrarhim/IoT-AI-Fire-Extinguisher-System" target="_blank" class="text-primary"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card rounded-2xl overflow-hidden card-hover transition">
+          <div class="h-48 bg-gradient-to-br from-primary/30 to-secondary/30 flex items-center justify-center text-6xl"><i class="fas fa-comments"></i></div>
+          <div class="p-8">
+            <h3 class="text-xl font-bold mb-3">Chatbot Génératif IA</h3>
+            <p class="text-slate-400 text-sm">Transformers • RAG • Hugging Face • Flask • LLMs • TensorFlow • NLP</p>
+            <p class="text-slate-400 text-sm"><li>Designed an intelligent chatbot using Transformers and NLP to understand context and generate human-like responses.</li></p>
+          </div>
+        </div>
+
+        <div class="project-card rounded-2xl overflow-hidden card-hover transition">
+          <div class="h-48 bg-gradient-to-br from-primary/30 to-secondary/30 flex items-center justify-center text-6xl"><i class="fas fa-comments"></i></div>
+          <div class="p-8">
+            <h3 class="text-xl font-bold mb-3">AI Knowledge Assistant (Generative Agent for Technical Documentation)</h3>
+            <p class="text-slate-400 text-sm">PyTorch • TensorFlow • Hugging Face Transformers • Flask • RAG • OpenAI</p>
+             <li>Integrated context-aware generation based on internal data (project type, domain, and user history) to ensure consistency and relevance.</li>
+       
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section id="certifications" class="py-20 bg-darker">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4">Certifications</h2>
+      <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-12"></div>
+
+      <div class="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <div class="bg-slate-800/70 p-6 rounded-xl card-hover transition">
+          <h3 class="font-bold mb-2">Deep Learning</h3>
+          <p class="text-sm text-slate-400">NVIDIA • 2024</p>
+           <a href="assets/deep.learning.pdf" download class="inline-flex items-center gap-2 px-4 py-2 bg-primary/20 text-primary rounded-lg hover:bg-primary hover:text-white transition text-sm">
+            <i class="fas fa-download"></i> Télécharger
+          </a>
+        </div>
+        <div class="bg-slate-800/70 p-6 rounded-xl card-hover transition">
+          <h3 class="font-bold mb-2">AI for Predictive Maintenance</h3>
+          <p class="text-sm text-slate-400">NVIDIA • 2024</p>
+          <a href="assets/Applications of AI for Predictive Maintenance.pdf" download class="inline-flex items-center gap-2 px-4 py-2 bg-primary/20 text-primary rounded-lg hover:bg-primary hover:text-white transition text-sm">
+            <i class="fas fa-download"></i> Télécharger
+          </a>
+        </div>
+        <div class="bg-slate-800/70 p-6 rounded-xl card-hover transition">
+          <h3 class="font-bold mb-2">ROS Foundation</h3>
+          <p class="text-sm text-slate-400">The Construct • 2024</p>
+            <a href="assets/certificat de construct ai.pdf" download class="inline-flex items-center gap-2 px-4 py-2 bg-primary/20 text-primary rounded-lg hover:bg-primary hover:text-white transition text-sm">
+            <i class="fas fa-download"></i> Télécharger
+          </a>
+        </div>
+        <div class="bg-slate-800/70 p-6 rounded-xl card-hover transition">
+          <h3 class="font-bold mb-2">Industry 4.0</h3>
+          <p class="text-sm text-slate-400">Novation City • 2024</p>
+           <a href="assets/certificate de l'industrie .pdf" download class="inline-flex items-center gap-2 px-4 py-2 bg-primary/20 text-primary rounded-lg hover:bg-primary hover:text-white transition text-sm">
+            <i class="fas fa-download"></i> Télécharger
+          </a>
+        </div>
+
+        <div class="bg-slate-800/70 p-6 rounded-xl card-hover transition">
+          <h3 class="font-bold mb-2">Python for Data Science</h3>
+          <p class="text-sm text-slate-400">Coursera • 2022</p>
+           <a href= download class="inline-flex items-center gap-2 px-4 py-2 bg-primary/20 text-primary rounded-lg hover:bg-primary hover:text-white transition text-sm">
+            <i class="fas fa-download"></i> Télécharger
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4">Contact Me</h2>
+      <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-12"></div>
+
+      <div class="max-w-2xl mx-auto bg-slate-800/60 rounded-3xl p-10">
+        <div class="grid md:grid-cols-3 gap-8 text-left">
+          <div class="text-center">
+            <i class="fas fa-envelope text-4xl gradient-text mb-4"></i>
+            <p class="font-bold">Email</p>
+            <p class="text-sm text-slate-400">yosrarhimyosra@gmail.com</p>
+          </div>
+          <div class="text-center">
+            <i class="fas fa-phone text-4xl gradient-text mb-4"></i>
+            <p class="font-bold">Phone</p>
+            <p class="text-sm text-slate-400">+216 92 187 090</p>
+          </div>
+          <div class="text-center">
+            <i class="fas fa-map-marker-alt text-4xl gradient-text mb-4"></i>
+            <p class="font-bold">Location</p>
+            <p class="text-sm text-slate-400">Monastir, Tunisie</p>
+          </div>
+        </div>
+        <div class="mt-10 flex justify-center gap-6">
+          <a href="https://linkedin.com/in/rhim-yosra-135a51251" target="_blank" class="w-14 h-14 rounded-full bg-slate-700 flex items-center justify-center hover:bg-primary transition"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/yosrarhim" target="_blank" class="w-14 h-14 rounded-full bg-slate-700 flex items-center justify-center hover:bg-primary transition"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 bg-darker text-center">
+    <p class="text-slate-500">© 2025 Yosra Rhim – Tous droits réservés</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Menu mobile
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+
+    // Navigation active
+    window.addEventListener('scroll', () => {
+      let current = '';
+      const sections = document.querySelectorAll('section');
+      sections.forEach(sec => {
+        const top = sec.offsetTop - 150;
+        if (scrollY >= top) current = sec.getAttribute('id');
+      });
+      document.querySelectorAll('.nav-link').forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) link.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
