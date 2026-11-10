@@ -1,0 +1,28 @@
+/* ---------- CONTACT ---------- */
+.contact { padding-bottom: 32px; }
+.contact__big { font-family: var(--serif); font-size: clamp(3rem, 1.6rem + 6.6vw, 8.5rem); line-height: 0.9; letter-spacing: -0.035em; max-width: 13ch; }
+.contact__big em { font-style: italic; color: var(--accent); }
+.contact__mail { margin-top: clamp(40px, 5vw, 64px); display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; }
+.contact__mail a { font-family: var(--serif); font-size: clamp(1.5rem, 1rem + 2.4vw, 3rem); line-height: 1.1; word-break: break-word; }
+.copy { display: inline-flex; align-items: center; gap: 8px; height: 40px; padding-inline: 14px; border: 1px solid var(--line-d-strong); color: var(--muted-d); transition: color 0.2s, border-color 0.2s; }
+.copy:hover { color: var(--accent); border-color: var(--accent); }
+.copy svg { width: 14px; height: 14px; }
+.channels { margin-top: clamp(48px, 6vw, 88px); display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line-d-strong); }
+.channel { display: flex; flex-direction: column; gap: 10px; padding: 20px 20px 24px 0; border-bottom: 1px solid var(--line-d); position: relative; transition: color 0.25s; }
+.channel + .channel { padding-left: 20px; border-left: 1px solid var(--line-d); }
+.channel .mono { color: var(--muted-d); display: flex; justify-content: space-between; align-items: center; }
+.channel .mono svg { width: 14px; height: 14px; transition: transform 0.35s var(--ease); }
+.channel b { font-weight: 500; font-size: 1.0625rem; overflow-wrap: anywhere; }
+a.channel:hover { color: var(--accent); }
+a.channel:hover .mono svg { transform: translate(3px, -3px); }
+@media (max-width: 900px) {
+  .channels { grid-template-columns: 1fr 1fr; }
+  .channel:nth-child(3) { padding-left: 0; border-left: 0; }
+}
+@media (max-width: 480px) {
+  .channels { grid-template-columns: 1fr; }
+  .channel + .channel { padding-left: 0; border-left: 0; }
+}
+
+.site-footer { border-top: 1px solid var(--line-d); margin-top: clamp(72px, 8vw, 120px); padding-top: 20px; display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; color: var(--muted-d); }
+.site-footer a:hover { color: var(--accent); }

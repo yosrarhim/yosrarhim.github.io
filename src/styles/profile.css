@@ -1,0 +1,52 @@
+/* ---------- PROFILE ---------- */
+.profile__portrait { grid-column: 1 / span 4; }
+.profile__body { grid-column: 6 / span 7; }
+.portrait { position: relative; overflow: hidden; background: var(--paper-2); }
+.portrait img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; filter: grayscale(1) contrast(1.04); transition: filter 0.8s var(--ease), transform 1.2s var(--ease); }
+.portrait:hover img { filter: grayscale(0.15) contrast(1); transform: scale(1.015); }
+.profile__statement { font-family: var(--serif); font-size: clamp(1.875rem, 1.3rem + 2.2vw, 3.5rem); line-height: 1.04; letter-spacing: -0.015em; }
+.profile__statement em { font-style: italic; color: var(--accent-ink); }
+.profile__prose { margin-top: 32px; columns: 2 300px; column-gap: 40px; color: var(--muted-l); }
+.profile__prose p { break-inside: avoid; margin-bottom: 1em; }
+.profile__prose strong { color: var(--text-l); font-weight: 500; }
+
+.facts { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line-l-strong); margin-top: 32px; }
+.facts > div { padding: 16px 16px 0 0; }
+.facts > div + div { padding-left: 16px; border-left: 1px solid var(--line-l); }
+.facts dt { color: var(--muted-l); }
+.facts dd { font-family: var(--serif); font-size: clamp(1.5rem, 1.2rem + 1vw, 2.25rem); line-height: 1.1; margin-top: 6px; }
+
+/* Trajectory: Electronics → Embedded → AI → Intelligent applications */
+.trajectory { margin-top: clamp(72px, 8vw, 128px); }
+.trajectory__title { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; margin-bottom: 28px; }
+.trajectory__track { display: grid; grid-template-columns: repeat(4, 1fr); position: relative; }
+.trajectory__track::before {
+  content: ""; position: absolute; left: 0; right: 0; top: 7px; height: 1px; background: var(--line-l-strong);
+}
+.trajectory__track::after {
+  content: ""; position: absolute; left: 0; top: 7px; height: 1px; width: 100%; background: var(--accent-ink);
+  transform: scaleX(var(--progress, 0)); transform-origin: left; transition: transform 1.6s var(--ease);
+}
+.stage { position: relative; padding-right: 24px; }
+.stage__dot { width: 15px; height: 15px; border: 1px solid var(--text-l); background: var(--paper); transform: rotate(45deg) scale(0.75); position: relative; z-index: 1; }
+.stage:last-child .stage__dot { background: var(--accent-ink); border-color: var(--accent-ink); }
+.stage__idx { margin-top: 20px; color: var(--accent-ink); }
+.stage__name { font-family: var(--serif); font-size: clamp(1.5rem, 1.2rem + 1vw, 2.125rem); line-height: 1.05; margin-top: 6px; }
+.stage__list { margin-top: 16px; display: grid; gap: 10px; }
+.stage__list li { display: grid; grid-template-columns: 44px 1fr; gap: 8px; font-size: var(--fs-small); color: var(--muted-l); line-height: 1.45; }
+.stage__list time { font-family: var(--mono); font-size: 0.75rem; color: var(--text-l); padding-top: 1px; }
+
+@media (max-width: 1024px) {
+  .profile__portrait { grid-column: 1 / span 5; }
+  .profile__body { grid-column: 7 / span 6; }
+  .trajectory__track { grid-template-columns: repeat(2, 1fr); row-gap: 48px; }
+  .trajectory__track::before, .trajectory__track::after { display: none; }
+}
+@media (max-width: 760px) {
+  .profile__portrait { grid-column: 1 / -1; max-width: 360px; margin-bottom: 40px; }
+  .profile__body { grid-column: 1 / -1; }
+  .facts { grid-template-columns: 1fr 1fr; }
+  .facts > div:nth-child(3) { grid-column: 1 / -1; border-left: 0; padding-left: 0; border-top: 1px solid var(--line-l); margin-top: 16px; }
+  .trajectory__track { grid-template-columns: 1fr; row-gap: 40px; }
+  .trajectory__title { flex-direction: column; gap: 8px; }
+}

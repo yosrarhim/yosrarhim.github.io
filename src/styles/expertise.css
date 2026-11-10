@@ -1,0 +1,16 @@
+/* ---------- EXPERTISE (spec sheet) ---------- */
+.expertise { border-top: 1px solid var(--line-d-strong); }
+.domain {
+  display: grid; grid-template-columns: 56px minmax(0, 3fr) minmax(0, 5fr) minmax(0, 4fr); gap: 16px 24px; align-items: start;
+  padding: 24px 0; border-bottom: 1px solid var(--line-d); transition: background-color 0.3s;
+}
+.domain:hover { background: rgba(0,224,198,0.035); }
+.domain__idx { color: var(--accent); padding-top: 6px; }
+.domain__name { font-family: var(--serif); font-size: clamp(1.5rem, 1.25rem + 0.9vw, 2.125rem); line-height: 1.05; }
+.domain__tools .tag { color: var(--text-d); border-color: var(--line-d-strong); }
+.domain__proof { color: var(--muted-d); font-size: var(--fs-small); }
+.domain__proof b { display: block; font-family: var(--mono); font-weight: 450; font-size: 0.6875rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--graphite); margin-bottom: 4px; }
+@media (max-width: 900px) {
+  .domain { grid-template-columns: 40px minmax(0, 1fr); }
+  .domain__tools, .domain__proof { grid-column: 2; }
+}

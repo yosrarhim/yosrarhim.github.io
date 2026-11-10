@@ -1,0 +1,23 @@
+/* ---------- EDUCATION & CERTIFICATIONS ---------- */
+.edu { row-gap: 64px; }
+.edu__degrees { grid-column: 1 / span 7; }
+.edu__side { grid-column: 9 / span 4; }
+.degree { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 20px; padding: 24px 0; border-bottom: 1px solid var(--line-l-strong); }
+.degree:first-child { border-top: 1px solid var(--text-l); }
+.degree time { font-family: var(--mono); font-size: 0.8125rem; color: var(--muted-l); padding-top: 4px; }
+.degree h3 { font-family: var(--serif); font-weight: 400; font-size: clamp(1.5rem, 1.25rem + 0.9vw, 2.125rem); line-height: 1.08; }
+.degree p { margin-top: 6px; color: var(--muted-l); font-size: 0.9375rem; }
+.degree .mono { display: block; color: var(--accent-ink); margin-bottom: 8px; }
+.certs { border-top: 1px solid var(--text-l); }
+.cert { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 16px; padding: 14px 0; border-bottom: 1px solid var(--line-l); align-items: center; }
+.cert__name { font-weight: 500; font-size: 0.9375rem; line-height: 1.35; }
+.cert__meta { grid-column: 1; color: var(--muted-l); }
+.cert__link { grid-column: 2; grid-row: 1 / span 2; display: inline-flex; align-items: center; gap: 6px; color: var(--accent-ink); }
+.cert__link svg { width: 14px; height: 14px; }
+.cert__link--none { color: var(--muted-l); }
+.langs { margin-top: 48px; border-top: 1px solid var(--text-l); }
+.lang { display: grid; grid-template-columns: 1fr auto; padding: 12px 0; border-bottom: 1px solid var(--line-l); font-size: 0.9375rem; }
+.lang span:last-child { color: var(--muted-l); font-family: var(--mono); font-size: 0.8125rem; }
+.side-title { margin-bottom: 14px; color: var(--muted-l); }
+@media (max-width: 1024px) { .edu__degrees, .edu__side { grid-column: 1 / -1; } }
+@media (max-width: 480px) { .degree { grid-template-columns: 1fr; gap: 6px; } }

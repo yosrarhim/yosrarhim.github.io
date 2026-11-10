@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yosrarhim.github.io/sitemap.xml
