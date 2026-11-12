@@ -28,7 +28,7 @@ export const workSection: SectionMeta = { num: '§03', label: 'Selected work', n
 
 export const workIntro = {
   title: 'Other systems, *end to end.*' satisfies Rich,
-  body: 'Each entry states the problem, the technical approach and what I built. Repository links point to my public GitHub; where none exists, it is said.',
+  body: 'The problem, my approach and the stack for each project — with the code when it is public.',
   labels: {
     problem: 'Problem',
     approach: 'Approach',
@@ -44,10 +44,10 @@ export const projects: readonly Project[] = [
     name: 'IoT-AI Fire Extinguisher',
     kind: 'Embedded systems · Computer vision · IoT',
     source: 'GitHub',
-    problem: 'Detect a fire from a low-cost camera and trigger suppression automatically, without a human in the loop.',
-    // TODO(confirm, Q7): was YOLOv3-Tiny actually used in this project?
+    problem: 'Detect a fire with a low-cost camera and put it out automatically.',
+    // TODO(confirm, Q7): was YOLOv3-Tiny actually used in this project? (cited on the CV, not in the repo)
     approach:
-      'An ESP32-CAM streams video to a Python vision node. The published detector combines HSV flame-colour profiles, contour circularity and temporal motion analysis (MOG2 background subtraction); the CV project description also cites YOLOv3-Tiny. On detection, an MQTT message drives a second ESP32 that switches relays for the pump and alarm, with a 60-second automatic shut-off as a safety measure.',
+      'An ESP32-CAM sends video to a Python/OpenCV detector (flame colour, shape and motion). On detection, MQTT tells a second ESP32 to start the pump and alarm, with a 60-second safety shut-off.',
     schematic: {
       heading: 'Architecture',
       ariaLabel: 'ESP32-CAM, then vision node, then MQTT, then ESP32 relay node, then pump and alarm',
@@ -61,9 +61,9 @@ export const projects: readonly Project[] = [
     name: 'Smart Chatbot — RAG',
     kind: 'Generative AI · NLP · Retrieval',
     source: 'GitHub',
-    problem: 'Answer questions with contextual, grounded responses rather than free-form generation.',
+    problem: 'Answer questions from real documents instead of inventing answers.',
     approach:
-      'A retrieval-augmented pipeline: documents are embedded with a sentence-transformers model (all-MiniLM-L6-v2) into a FAISS index; the top-k passages are assembled into a numbered context prompt and passed to a configurable Hugging Face causal language model. A Flask API returns the answer together with its source identifiers.',
+      'Documents are indexed with FAISS; the most relevant passages are given to a Hugging Face language model, and a Flask API returns the answer with its sources (RAG).',
     schematic: {
       heading: 'Pipeline',
       ariaLabel: 'Question, then embedding, then FAISS top-k, then prompt, then language model, then answer with sources',
@@ -77,9 +77,9 @@ export const projects: readonly Project[] = [
     name: 'Smart Stage',
     kind: 'Full-stack · Predictive analytics · Leoni, 2025',
     source: 'GitHub',
-    problem: 'Internship management at Leoni relied on manual follow-up of tasks, logbooks and reports.',
+    problem: 'Internships at Leoni were followed up by hand.',
     approach:
-      'A full-stack web platform for interns, coaches and administrators, with predictive analytics for automated task recommendations (+30% efficiency), Power BI dashboards and secure JWT authentication with role-based access control.',
+      'A web platform for interns, coaches and admins, with task recommendations (+30% efficiency), Power BI dashboards and secure role-based access.',
     stack: ['Node.js', 'Express', 'React', 'MongoDB', 'Power BI', 'JWT · RBAC'],
     repository: 'https://github.com/yosrarhim/Smart-Stage-AI-Powered-Internship-Management-Platform-',
   },
@@ -88,8 +88,8 @@ export const projects: readonly Project[] = [
     name: 'AI Knowledge Assistant',
     kind: 'Generative AI · Summarisation',
     source: 'No public repo',
-    problem: 'Technical documentation is long and slow to consult.',
-    approach: 'A generative AI assistant that summarises technical documents, built with Transformer models from Hugging Face and served through Flask.',
+    problem: 'Technical documents are long and slow to read.',
+    approach: 'A generative AI assistant that summarises them (Hugging Face Transformers, Flask).',
     stack: ['Python', 'Hugging Face Transformers', 'Flask'],
     repository: null,
   },

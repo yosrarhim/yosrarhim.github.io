@@ -1,10 +1,9 @@
-import { useState } from 'react';
 import { hero, links, ui } from '../data/profile';
 import { cssVars } from '../lib/style';
 import { Icon } from './Icon';
 import { RichText } from './RichText';
-import { SignalCanvas, initialReadout, type Readout } from './SignalCanvas';
 import { SocialIcons } from './SocialIcons';
+import { SystemStack } from './SystemStack';
 
 /** Load-in choreography: each `data-hero` element fades in after `--d` once `body.is-loaded` is set. */
 const delay = (d: string) => cssVars({ '--d': d });
@@ -47,10 +46,10 @@ export function Hero() {
         </div>
 
         <figure className="hero__figure" data-hero="" style={delay('.55s')}>
-          <Instrument />
+          <SystemStack />
           <figcaption className="figcaption mono">
-            <b>{hero.signal.figure}</b>
-            <span>{hero.signal.caption}</span>
+            <b>{hero.stack.figure}</b>
+            <span>{hero.stack.caption}</span>
           </figcaption>
         </figure>
       </div>
@@ -63,29 +62,5 @@ export function Hero() {
         </ul>
       </div>
     </section>
-  );
-}
-
-/** Instrument panel; holds the live readout so only this subtree re-renders. */
-function Instrument() {
-  const [readout, setReadout] = useState<Readout>(initialReadout);
-  const s = hero.signal;
-  return (
-    <div className="instrument ticks">
-      <div className="instrument__bar mono">
-        <span>
-          <b>{s.channel}</b> {s.channelLabel}
-        </span>
-        <span>{s.status}</span>
-      </div>
-      <div className="instrument__canvas">
-        <SignalCanvas ariaLabel={s.ariaLabel} windowSize={s.windowSize} onReadout={setReadout} />
-      </div>
-      <dl className="instrument__readout">
-        <div><dt className="mono">{s.windowLabel}</dt><dd>{s.windowValue}</dd></div>
-        <div><dt className="mono">{s.probabilityLabel}</dt><dd id="sig-p">{readout.p}</dd></div>
-        <div><dt className="mono">{s.stateLabel}</dt><dd className="state" id="sig-state" data-state={readout.state}>{readout.state}</dd></div>
-      </dl>
-    </div>
   );
 }

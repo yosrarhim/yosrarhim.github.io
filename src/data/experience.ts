@@ -31,11 +31,9 @@ export const jobs: readonly Job[] = [
     type: 'Final-year project',
     project: 'Edge Sense AI — federated AI platform for industrial predictive maintenance',
     highlights: [
-      // TODO(confirm, Q8): is the 500-machine fleet real or simulated?
-      'Edge-AI / federated-learning platform (FedAvg) for predictive fault detection across a 500-machine fleet, without centralising raw data.',
-      'Local GRU model — 0.943 accuracy, 0.983 AUC-ROC — with weight transmission over MQTT (Mosquitto).',
-      'Spring Boot backend (REST, JWT, FedAvg) and real-time React dashboard (WebSocket / STOMP) with automated alerts and reports.',
-      'Six-service Docker Compose deployment.',
+      'Federated-learning platform (FedAvg) that predicts machine failures without sharing raw data.',
+      'Local GRU model: 0.943 accuracy, 0.983 AUC-ROC.',
+      'Spring Boot backend, real-time React dashboard, Docker deployment.',
     ],
     caseStudy: { label: 'Read the case study ↑', href: '#edge-sense-ai' },
   },
@@ -84,8 +82,7 @@ export const jobs: readonly Job[] = [
     org: 'Watts Electronics',
     role: 'IoT Developer Intern',
     place: 'Monastir',
-    // TODO(confirm, Q5): exact internship dates.
-    when: { datetime: '2022', label: '2022' },
+    when: { datetime: '2022-08', label: 'Aug 2022' },
     type: 'Internship',
     project: 'Smart device development',
     highlights: ['Designed electronic boards for smart environmental monitoring with Arduino, ESP32 and STM32.'],

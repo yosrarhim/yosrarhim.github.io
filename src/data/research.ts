@@ -23,7 +23,7 @@ export const researchSection: SectionMeta = { num: '§06', label: 'Research inte
 
 export const researchIntro = {
   title: 'Questions I want\n*to work on.*' satisfies Rich,
-  body: 'These are the directions I would like to pursue in doctoral research or advanced R&D. Each one grows out of a system I have already built — or, where marked, out of a gap I want to close.',
+  body: 'Topics I would like to explore further, in R&D or doctoral research — each one linked to work I have already done.',
 };
 
 export const topics: readonly Topic[] = [
@@ -31,42 +31,42 @@ export const topics: readonly Topic[] = [
     idx: 'R.01',
     glyph: 'federated',
     title: 'Federated learning',
-    question: 'How can federated models stay robust when industrial sites hold non-IID data of very different sizes and failure profiles?',
-    link: { label: 'Grounded in', text: 'Weighted FedAvg and profile rotation in Edge Sense AI' },
+    question: 'Robust models when every site has very different data.',
+    link: { label: 'Grounded in', text: 'Edge Sense AI' },
   },
   {
     idx: 'R.02',
     glyph: 'chip',
     title: 'Edge AI',
-    question: 'What is the smallest model that still anticipates a failure in time — and can inference and learning run on the device itself?',
-    link: { label: 'Grounded in', text: 'On-site sliding-window GRU inference' },
+    question: 'Small models that run and learn on the device itself.',
+    link: { label: 'Grounded in', text: 'On-site GRU inference' },
   },
   {
     idx: 'R.03',
     glyph: 'signal',
     title: 'Intelligent embedded systems',
-    question: 'Closing the loop from sensing to inference to actuation on microcontrollers, with safety built in.',
-    link: { label: 'Grounded in', text: 'ESP32-CAM fire detection with MQTT-driven actuation' },
+    question: 'From sensing to decision to action on microcontrollers, safely.',
+    link: { label: 'Grounded in', text: 'ESP32-CAM fire extinguisher' },
   },
   {
     idx: 'R.04',
     glyph: 'target',
     title: 'Predictive maintenance',
-    question: 'Time-series failure prediction where thresholds reflect the real cost asymmetry between a missed failure and a false alarm.',
-    link: { label: 'Grounded in', text: 'Recall-first GRU · NVIDIA DLI, AI for predictive maintenance' },
+    question: 'Predicting failures early enough to act, with few false alarms.',
+    link: { label: 'Grounded in', text: 'Edge Sense AI · NVIDIA DLI certificate' },
   },
   {
     idx: 'R.05',
     glyph: 'network',
     title: 'Deep learning',
-    question: 'Sequence models for sensor data — from recurrent networks to attention-based architectures.',
-    link: { label: 'Grounded in', text: 'GRU design · Transformers in GenAI projects' },
+    question: 'Sequence models for sensor data, from RNNs to attention.',
+    link: { label: 'Grounded in', text: 'GRU model · Transformer projects' },
   },
   {
     idx: 'R.06',
     glyph: 'bolt',
     title: 'AI hardware acceleration',
-    question: 'Quantisation, pruning and accelerator-aware deployment for microcontroller-class and embedded targets.',
-    link: { label: 'Next step', text: 'Not yet in my portfolio — a direction I want to explore.', next: true },
+    question: 'Making models smaller and faster for embedded chips.',
+    link: { label: 'Next step', text: 'A direction I want to explore.', next: true },
   },
 ];

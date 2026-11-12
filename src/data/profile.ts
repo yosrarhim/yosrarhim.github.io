@@ -7,7 +7,7 @@ import type { IconName, Rich, SectionMeta, Spec } from './types';
 export const person = {
   name: 'Yosra Rhim',
   initials: 'YR',
-  brandRole: 'Embedded · AI',
+  brandRole: 'AI · Embedded',
   location: 'Monastir, Tunisia',
   email: 'yosrarhimyosra@gmail.com',
 } as const;
@@ -83,29 +83,30 @@ export const navAliases: Readonly<Record<string, string>> = {
 export const hero = {
   edition: 'Portfolio · Rev. 2026',
   location: person.location,
-  // TODO(confirm, Q3): keep this availability line or replace it.
-  status: 'Open to R&D engineering & doctoral opportunities',
-  kicker: 'Embedded Systems & AI Engineer',
+  status: 'Open to all opportunities',
+  kicker: 'AI & Embedded Systems Engineer',
   firstName: 'Yosra',
   lastName: 'Rhim',
   headline: 'Intelligence, *where the data is born* — from the sensor to the model.' satisfies Rich,
   intro:
-    'Engineer in **Embedded Electronic Systems & Telecommunications** (ESPRIM, 2026). I design systems that join hardware, software and machine learning — most recently **Edge Sense AI**, a federated edge-AI platform for industrial predictive maintenance built with ACTIA Engineering Services.' satisfies Rich,
+    'Engineering graduate (2026) in **AI / Machine Learning**, **embedded systems & IoT** and **full-stack development**.' satisfies Rich,
   primaryCta: { label: 'Explore the work', href: '#edge-sense-ai' },
-  domains: ['Federated learning', 'Edge AI', 'Embedded systems', 'IoT · MQTT', 'Predictive maintenance', 'Computer vision'],
-  signal: {
-    channel: 'CH.01',
-    channelLabel: 'vibration · edge node',
+  domains: ['AI · Machine learning', 'Embedded systems', 'IoT', 'Full-stack development', 'Edge AI', 'Computer vision'],
+  /** Hero panel: the layers of a system I can build, with tools from my CV. */
+  stack: {
+    label: 'SYS.01',
+    title: 'from sensor to app',
     status: 'live',
-    ariaLabel:
-      'Animated illustration: a sensor vibration signal scrolls through a sliding window that a GRU model scores for failure probability.',
-    windowSize: 64,
-    windowLabel: 'Window',
-    windowValue: '64 samples',
-    probabilityLabel: 'p(failure)',
-    stateLabel: 'State',
+    stepMs: 1800,
+    layers: [
+      { verb: 'Sense', domain: 'Embedded systems', short: 'Embedded', tools: ['ESP32', 'STM32', 'Arduino', 'C/C++'] },
+      { verb: 'Connect', domain: 'IoT', short: 'IoT', tools: ['MQTT', 'Wi-Fi', 'REST'] },
+      { verb: 'Learn', domain: 'AI / Machine learning', short: 'AI / ML', tools: ['Python', 'PyTorch', 'TensorFlow'] },
+      { verb: 'Deliver', domain: 'Full-stack software', short: 'Full-stack', tools: ['React', 'Spring Boot', 'Node.js'] },
+    ],
+    readout: { step: 'Step', layer: 'Layer', domain: 'Domain' },
     figure: 'Fig. 00',
-    caption: 'Illustrative simulation of the on-device pipeline used in Edge Sense AI: signal → sliding window → GRU → threshold.',
+    caption: 'How I work: one engineer across the whole system, from the sensor to the app.',
   },
 } as const;
 
@@ -114,7 +115,7 @@ export const hero = {
 /* ------------------------------------------------------------------ */
 
 export const profile = {
-  section: { num: '§01', label: 'Profile — engineering identity', note: 'Electronics → AI' } satisfies SectionMeta,
+  section: { num: '§01', label: 'Profile', note: 'AI · Embedded · Full-stack' } satisfies SectionMeta,
   title: 'Profile',
   portrait: {
     webpSrcSet: '/img/yosra-rhim-480.webp 480w, /img/yosra-rhim-760.webp 760w',
@@ -127,12 +128,11 @@ export const profile = {
     figure: 'Fig. 01',
     caption: 'Yosra Rhim — Monastir, Tunisia',
   },
-  statement:
-    'I work across the whole chain of an intelligent system — from the *board that reads a sensor* to the *model that learns from it*, and the software that makes both useful.' satisfies Rich,
+  statement: 'A versatile engineer — *AI*, *embedded systems* and *full-stack software*.' satisfies Rich,
+  // Yosra's own profile text.
   prose: [
-    "My path started in **electronics** — a technical-sciences baccalaureate, then a bachelor's degree in **embedded systems** at ISIMM — and continued with an engineering degree in **embedded electronic systems and telecommunications** at ESPRIM.",
-    'Along the way, four internships and an industry final-year project took me from designing monitoring boards on ESP32 and STM32 to forecasting models, full-stack platforms and, finally, **federated learning at the edge**.',
-    'What connects these projects is a single question: how to make intelligence run **reliably, privately and close to the machine** — the space where embedded engineering and machine learning meet.',
+    'Engineering graduate (2026) with hands-on experience in **AI / Machine Learning**, **full-stack development** and **IoT** — built across four company internships and a final-year project in federated AI.',
+    'Looking for an engineering role to design and deploy innovative AI and software solutions within a technical team. **Open to all opportunities.**',
   ] satisfies readonly Rich[],
   facts: [
     { term: 'Degree', value: 'Engineer, 2026' },
@@ -158,8 +158,7 @@ export const trajectory = {
       name: 'Electronics',
       items: [
         { year: '2020', text: 'Baccalaureate in Technical Sciences, Monastir' },
-        // TODO(confirm, Q5): exact Watts Electronics internship dates.
-        { year: '2022', text: 'Watts Electronics — electronic boards for smart environmental monitoring' },
+        { year: '2022', text: 'Watts Electronics — electronic boards for environmental monitoring' },
       ],
     },
     {
@@ -185,7 +184,7 @@ export const trajectory = {
       name: 'Intelligent systems',
       items: [
         { year: '2026', text: 'Engineering degree, ESPRIM' },
-        { year: '2026', text: 'ACTIA — Edge Sense AI, federated edge AI for predictive maintenance' },
+        { year: '2026', text: 'ACTIA — Edge Sense AI (federated AI)' },
       ],
     },
   ] satisfies readonly TrajectoryStage[],
@@ -221,6 +220,6 @@ export const footer = {
   /** Shown in the pre-rendered HTML; replaced by the current year in the browser. */
   year: 2026,
   owner: 'Yosra Rhim · Monastir, Tunisia',
-  note: 'Hand-built HTML, CSS & JS · no tracking',
+  note: 'Built with React & TypeScript · no tracking',
   backToTop: 'Back to top ↑',
 } as const;

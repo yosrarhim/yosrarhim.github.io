@@ -23,20 +23,21 @@
 /* ---------- Tokens ---------- */
 :root {
   /* Colour */
-  --ink: #0a0d12;
-  --ink-2: #0f141b;
-  --ink-3: #161d26;
+  /* Navy blue (replaces near-black), matched to the portrait's navy tones */
+  --ink: #1e3a5f;
+  --ink-2: #23436c;
+  --ink-3: #2b4f7e;
   --paper: #f1eee6;
   --paper-2: #e7e3d8;
-  --graphite: #8b9099;
-  --text-d: #e9e6de;          /* body text on dark */
-  --muted-d: #9ca2ab;         /* secondary text on dark  (≈7:1) */
-  --text-l: #12161c;          /* body text on paper */
-  --muted-l: #555a63;         /* secondary text on paper (≈6:1) */
-  --line-d: rgba(233, 230, 222, 0.12);
-  --line-d-strong: rgba(233, 230, 222, 0.24);
-  --line-l: rgba(10, 13, 18, 0.14);
-  --line-l-strong: rgba(10, 13, 18, 0.32);
+  --graphite: #93a3ba;
+  --text-d: #f2f5f9;          /* body text on navy */
+  --muted-d: #bfcadb;         /* secondary text on navy (≈7:1) */
+  --text-l: #14203a;          /* body text on paper */
+  --muted-l: #4e5a6d;         /* secondary text on paper (≈6:1) */
+  --line-d: rgba(242, 245, 249, 0.14);
+  --line-d-strong: rgba(242, 245, 249, 0.28);
+  --line-l: rgba(15, 29, 51, 0.14);
+  --line-l-strong: rgba(15, 29, 51, 0.32);
   --accent: #00e0c6;          /* electric cyan — signal, data, focus */
   --accent-dim: rgba(0, 224, 198, 0.14);
   --accent-ink: #006b5f;      /* accent for text on paper (≈5.6:1) */
